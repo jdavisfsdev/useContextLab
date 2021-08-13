@@ -1,6 +1,6 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 import { useData } from '../state/StateProvider';
 
 export default function Chart() {
@@ -10,7 +10,7 @@ export default function Chart() {
 
   return (
     <>
-      <Bar
+      <Pie
         data={{
           labels: states[0],
           datasets: [
