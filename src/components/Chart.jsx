@@ -1,14 +1,13 @@
 /* eslint-disable no-mixed-spaces-and-tabs */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Bar } from 'react-chartjs-2';
-import { getPopulation, getData } from '../services/getData';
 import { useData } from '../state/StateProvider';
 
 export default function Chart() {
 
   const states = useData();
   const population = useData();
-  
+
   return (
     <>
       <Bar
@@ -16,7 +15,7 @@ export default function Chart() {
           labels: states[0],
           datasets: [
             {
-              label: 'population',
+              label: 'Population',
               data: population[1],
               backgroundColor: [
                 '#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
